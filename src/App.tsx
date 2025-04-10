@@ -43,31 +43,31 @@ function App() {
 
         <section className="uploader-grid-col-5">
           <h2>File uploader minimal</h2>
-          <h3>Grid columns 5</h3>
+          <h3>5-column grid</h3>
           <uc-config
             ctx-name="my-uploader"
-            pubkey="c41dcdfa79a81e265549"
+            pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
           <uc-file-uploader-minimal ctx-name="my-uploader"></uc-file-uploader-minimal>
         </section>
 
         <section className="uploader-a-r-16-9">
           <h2>File uploader minimal</h2>
-          <h3>Grid columns 3 and aspect ratio 16 / 9</h3>
+          <h3>3-column grid with a 16:9 aspect ratio</h3>
           <uc-config
             ctx-name="my-uploader-1"
-            pubkey="c41dcdfa79a81e265549"
+            pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
           <uc-file-uploader-minimal ctx-name="my-uploader-1"></uc-file-uploader-minimal>
         </section>
 
         <section>
           <h2>File uploader minimal</h2>
-          <h3>Grid columns 3 and gridShowFilesNames</h3>
+          <h3>3-column grid with a gridShowFilesNames</h3>
           <uc-config
             gridShowFileNames="true"
             ctx-name="uploader-grid-show-file-names"
-            pubkey="c41dcdfa79a81e265549"
+            pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
           <uc-file-uploader-minimal ctx-name="uploader-grid-show-file-names"></uc-file-uploader-minimal>
         </section>
@@ -78,7 +78,7 @@ function App() {
           <uc-config
             multiple="false"
             ctx-name="single-uploader"
-            pubkey="c41dcdfa79a81e265549"
+            pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
           <uc-file-uploader-minimal ctx-name="single-uploader"></uc-file-uploader-minimal>
         </section>
@@ -91,10 +91,10 @@ function App() {
           <uc-config
             sourceList="local"
             multiple="false"
-            ctx-name="single-uploader"
-            pubkey="c41dcdfa79a81e265549"
+            ctx-name="single-uploader-local"
+            pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
-          <uc-file-uploader-minimal ctx-name="single-uploader"></uc-file-uploader-minimal>
+          <uc-file-uploader-minimal ctx-name="single-uploader-local"></uc-file-uploader-minimal>
         </section>
       </main>
     </Fragment>
