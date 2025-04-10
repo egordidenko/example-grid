@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import "./App.css";
 
@@ -8,6 +8,16 @@ import "@uploadcare/file-uploader/web/uc-file-uploader-minimal.min.css";
 UC.defineComponents(UC);
 
 function App() {
+  const [switcher, setSwitcher] = useState("list");
+
+  const handleFilesViewMode = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      setSwitcher("grid");
+      return;
+    }
+    setSwitcher("list");
+  };
+
   return (
     <Fragment>
       <header></header>
@@ -41,10 +51,22 @@ function App() {
           </ol>
         </section>
 
+        <section>
+          <div className="row">
+            <h3>List</h3>
+            <label className="switch">
+              <input type="checkbox" onChange={handleFilesViewMode} />
+              <span className="slider round"></span>
+            </label>
+            <h3>Grid</h3>
+          </div>
+        </section>
+
         <section className="uploader-grid-col-5">
           <h2>File uploader minimal</h2>
           <h3>5-column grid</h3>
           <uc-config
+            filesViewMode={switcher}
             ctx-name="my-uploader"
             pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
@@ -55,6 +77,7 @@ function App() {
           <h2>File uploader minimal</h2>
           <h3>3-column grid with a 16:9 aspect ratio</h3>
           <uc-config
+            filesViewMode={switcher}
             ctx-name="my-uploader-1"
             pubkey="08561eaebb1c3bd9b12f"
           ></uc-config>
@@ -65,6 +88,7 @@ function App() {
           <h2>File uploader minimal</h2>
           <h3>3-column grid with a gridShowFilesNames</h3>
           <uc-config
+            filesViewMode={switcher}
             gridShowFileNames="true"
             ctx-name="uploader-grid-show-file-names"
             pubkey="08561eaebb1c3bd9b12f"
@@ -76,6 +100,7 @@ function App() {
           <h2>File uploader minimal</h2>
           <h3>Single upload</h3>
           <uc-config
+            filesViewMode={switcher}
             multiple="false"
             ctx-name="single-uploader"
             pubkey="08561eaebb1c3bd9b12f"
@@ -89,6 +114,7 @@ function App() {
             Single upload and <pre>sourceList="local"</pre>
           </h3>
           <uc-config
+            filesViewMode={switcher}
             sourceList="local"
             multiple="false"
             ctx-name="single-uploader-local"
