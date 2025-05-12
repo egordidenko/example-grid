@@ -10,8 +10,5 @@ updates:
     schedule:
       interval: "daily"
     allow:
-      dependency-name: "@uploadcare/file-uploader"
-      
-
-  
-
+      - dependency-name: "@uploadcare/file-uploader"
+    open-pull-requests-limit: 2
