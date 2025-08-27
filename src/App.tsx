@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 UC.defineComponents(UC);
 
 function App() {
-  const configRef = useRef(null);
+  const configRef = useRef<InstanceType<UC.Config>>(null);
   useEffect(() => {
     if (configRef?.current) {
       configRef.current.localeDefinitionOverride = {
