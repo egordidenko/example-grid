@@ -76,6 +76,10 @@ section:not(:first-of-type) {
   --uc-grid-aspect-ratio: 16 / 9;
 }
 
+:where(.uploader-a-r-1-1) [uc-file-uploader-minimal] {
+  --uc-grid-aspect-ratio: 1 / 1;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -144,4 +148,9 @@ input:checked + .slider:before {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+[uc-file-uploader-minimal] {
+  width: 80%;
+  margin: 0 auto;
 }
