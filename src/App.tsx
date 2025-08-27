@@ -9,13 +9,13 @@ UC.defineComponents(UC);
 function App() {
   const configRef = useRef(null);
   useEffect(() => {
-    if (configRef?.current) return;
-
-    configRef?.current?.localeDefinitionOverride = {
-      en: {
-        done: "Upload",
-      },
-    };
+    if (configRef?.current) {
+      configRef.current.localeDefinitionOverride = {
+        en: {
+          done: "Upload",
+        },
+      };
+    }
   }, []);
 
   return (
