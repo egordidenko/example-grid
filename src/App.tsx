@@ -25,7 +25,7 @@ function App() {
           ref={configRef}
           filesViewMode='grid'
           ctx-name='my-uploader-1'
-          pubkey='aadfab151dfea016a1b0'
+          pubkey='8ffef950a74ff210dafb'
           useCloudImageEditor={false}
         ></uc-config>
         <uc-file-uploader-minimal ctx-name='my-uploader-1'></uc-file-uploader-minimal>
